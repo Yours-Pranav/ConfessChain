@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ConfessChain - Anonymous Confessions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <h1 class="logo">ConfessChain</h1>
+                <nav class="nav">
+                    <button class="nav-btn" id="homeBtn">Home</button>
+                    <button class="nav-btn" id="galleryBtn">Gallery</button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Landing Section -->
+    <section class="landing-section" id="landingSection">
+        <div class="container">
+            <div class="landing-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">ConfessChain</h1>
+                    <p class="hero-tagline">Anonymous confessions, immortalized forever</p>
+                    <p class="hero-description">
+                        Share your deepest thoughts and secrets anonymously. 
+                        Your confessions are safely stored and become part of the eternal chain.
+                    </p>
+                </div>
+                <div class="hero-actions">
+                    <button class="btn btn--primary btn--lg cta-button" id="startConfessingBtn">
+                        Start Confessing
+                    </button>
+                </div>
+                <div class="hero-visual">
+                    <div class="confession-preview">
+                        <div class="mask-icon">🎭</div>
+                        <p class="preview-text">"Your anonymous voice matters..."</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Confession Form Section -->
+    <section class="confession-section hidden" id="confessionSection">
+        <div class="container">
+            <div class="confession-form-wrapper">
+                <div class="form-header">
+                    <h2>Share Your Anonymous Confession</h2>
+                    <p>Express yourself freely. Your identity remains completely anonymous.</p>
+                </div>
+                
+                <form class="confession-form" id="confessionForm">
+                    <div class="form-group">
+                        <div class="textarea-wrapper">
+                            <textarea 
+                                id="confessionText" 
+                                class="form-control confession-textarea" 
+                                placeholder="Share your anonymous confession..."
+                                maxlength="500"
+                                required
+                            ></textarea>
+                            <div class="character-counter">
+                                <span id="charCount">0</span>/500
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="submit" class="btn btn--primary btn--lg submit-btn" id="submitBtn">
+                            <span class="btn-text">Submit Confession</span>
+                            <div class="loading-spinner hidden" id="loadingSpinner">
+                                <div class="spinner"></div>
+                            </div>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Message Section -->
+    <section class="success-section hidden" id="successSection">
+        <div class="container">
+            <div class="success-content">
+                <div class="success-icon">✨</div>
+                <h2>Confession Submitted Successfully!</h2>
+                <p>Your confession has been minted as an NFT on Arbitrum!</p>
+                <div class="success-actions">
+                    <button class="btn btn--primary" id="anotherConfessionBtn">Share Another</button>
+                    <button class="btn btn--outline" id="viewGalleryBtn">View Gallery</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section class="gallery-section hidden" id="gallerySection">
+        <div class="container">
+            <div class="gallery-header">
+                <h2>Recent Anonymous Confessions</h2>
+                <p>Discover what others have shared anonymously</p>
+            </div>
+            
+            <div class="confessions-grid" id="confessionsGrid">
+                <!-- Confessions will be dynamically inserted here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2025 ConfessChain. All confessions are anonymous and secure.</p>
+                <p class="footer-subtitle">Built on Arbitrum blockchain for permanence and anonymity</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
